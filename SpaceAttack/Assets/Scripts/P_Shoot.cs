@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class P_Shoot : MonoBehaviour {
 
-    public Rigidbody2D Projectile;
+    // Different bullet types 
+    public Rigidbody2D Current_Projectile; 
+    public Rigidbody2D Projectile_1;
+    public Rigidbody2D Projectile_2;
+    public Rigidbody2D Projectile_3;
+
+    private int weapon;
+
     public float speed;
     public float force;
 
@@ -19,6 +26,27 @@ public class P_Shoot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        // Switches weapons when user presses keys 1-4  
+        if(Input.GetKeyDown(KeyCode.Alpha1)){
+            weapon = 1;
+            Current_Projectile = Projectile_1;
+            Debug.Log("Weapon switch: 1.");
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            weapon = 2;
+            Current_Projectile = Projectile_2;
+            Debug.Log("Weapon switch: 2.");
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3)){
+            weapon = 3;
+            Current_Projectile = Projectile_3;
+            Debug.Log("Weapon switch: 3.");
+
+        }
+      
+
+       
         // Basic Shooting Script
         /*
          * Every time player hits space bar, we create a projectile clone
@@ -26,12 +54,12 @@ public class P_Shoot : MonoBehaviour {
          * After spawning, it is destroyed after x time, to save memory
          * 
          */
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if (Input.GetKeyDown(KeyCode.Space)){
             Rigidbody2D clone;
-            clone = Instantiate(Projectile, transform.position, Quaternion.identity) as Rigidbody2D;
+            clone = Instantiate(Current_Projectile, transform.position, Quaternion.identity) as Rigidbody2D;
             clone.velocity = transform.TransformDirection(Vector2.up * force);
 
-            if(clone.gameObject.tag == "bullet"){
+            if(clone.gameObject.tag == "bullet" && clone.gameObject != null ){
                 Destroy(clone.gameObject, bulletLife);
             }
 
@@ -39,7 +67,7 @@ public class P_Shoot : MonoBehaviour {
         }
 
 
-           
-		
 	}
+
+   
 }

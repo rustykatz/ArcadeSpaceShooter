@@ -29,11 +29,6 @@ public class P_move : MonoBehaviour {
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
-
-
-       
-
-
     }
 
     // Collision
@@ -45,6 +40,5 @@ public class P_move : MonoBehaviour {
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
-
     }
 }

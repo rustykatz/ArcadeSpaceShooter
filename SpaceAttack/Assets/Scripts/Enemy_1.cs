@@ -15,13 +15,16 @@ public class Enemy_1 : MonoBehaviour {
         transform.Translate(Vector2.down * speed * Time.deltaTime);
 	}
 
-
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "bullet"){
+    // Collision 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
             Debug.Log("Enemy Destroyed.");
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
-        
+
     }
+
 }

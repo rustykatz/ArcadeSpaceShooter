@@ -350,7 +350,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9aaff26f5104946b3965991effd3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 0}
+  Current_Projectile: {fileID: 50369156386058998, guid: 345e2ce1c39874fbab9398438350f257,
+    type: 2}
+  Projectile_1: {fileID: 50369156386058998, guid: 345e2ce1c39874fbab9398438350f257,
+    type: 2}
+  Projectile_2: {fileID: 50738757642236112, guid: 430ce2c2fa5f045769d3752bad64a83b,
+    type: 2}
+  Projectile_3: {fileID: 50540197052265290, guid: 9fa2ff9ed19834e30adf0fbcbb6a046a,
+    type: 2}
   speed: 10
   force: 2
 --- !u!212 &212290096470016658
