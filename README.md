@@ -18,9 +18,7 @@ If you have any suggestions on some cool things to add to this game or want to c
 Log Last Updated: Fri, Nov 8, 2018
 
 ## Features Currently Working On
-### '~' Denotes the Scene in which the features are being worked on
-
-~ LEVEL 1
+#### LEVEL 1
 1) Re-scaling Sprites to new resolution
 2) Setting screen bounds
 3) Point and scoring system
