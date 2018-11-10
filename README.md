@@ -17,8 +17,8 @@ If you have any suggestions on some cool things to add to this game or want to c
 
 Log Last Updated: Fri, Nov 8, 2018
 
-# Features Currently Working On
-# '~' Denotes the Scene in which the features are being worked on
+## Features Currently Working On
+### '~' Denotes the Scene in which the features are being worked on
 
 ~ LEVEL 1
 1) Re-scaling Sprites to new resolution
@@ -26,20 +26,18 @@ Log Last Updated: Fri, Nov 8, 2018
 3) Point and scoring system
 
 
-
-
-# Scenes Not Implemented Yet
+## Scenes Not Implemented Yet
 1) Highscore Scene
 2) Death Scene
 3) Tutorial Scene
 
 
-# Recently Added Features
+## Recently Added Features
 1) Button Manager (BtnManagerObj): Used to navigate through different scenes
 
 
 
-# Build Settings
+## Deployment
 Platforms: Mobile, WebGl
 Resolution: W: 750 L: 1334 -> Native iPhone 6s resolution ( Device used for testing)
 
