@@ -12,3 +12,31 @@ iOS App store for iPhones.
 If you have any suggestions on some cool things to add to this game or want to co-develope this project with me just let me know! :) 
 
 - Russell 
+
+
+
+Log Last Updated: Fri, Nov 8, 2018
+
+## Features Currently Working On
+#### LEVEL 1
+1) Re-scaling Sprites to new resolution
+2) Setting screen bounds
+3) Point and scoring system
+
+
+## Scenes Not Implemented Yet
+1) Highscore Scene
+2) Death Scene
+3) Tutorial Scene
+
+
+## Recently Added Features
+1) Button Manager (BtnManagerObj): Used to navigate through different scenes
+
+
+
+## Deployment
+1) Platforms: Mobile, WebGl
+2) Resolution: W: 750 L: 1334 -> Native iPhone 6s resolution ( Device used for testing)
+
+
