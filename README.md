@@ -15,7 +15,7 @@ If you have any suggestions on some cool things to add to this game or want to c
 
 
 
-Log Last Updated: Fri, Nov 8, 2018
+Log Last Updated: Sat, Nov 9, 2018
 
 ## Features Currently Working On
 #### LEVEL 1
@@ -27,11 +27,13 @@ Log Last Updated: Fri, Nov 8, 2018
 ## Scenes Not Implemented Yet
 1) Highscore Scene
 2) Death Scene
-3) Tutorial Scene
+3) Settings Scene 
 
 
 ## Recently Added Features
 1) Button Manager (BtnManagerObj): Used to navigate through different scenes
+2) Screen Bounds
+3) Modular Enemy Spawner
 
 
 
