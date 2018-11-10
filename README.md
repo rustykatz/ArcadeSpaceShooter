@@ -28,7 +28,7 @@ Log Last Updated: Fri, Nov 8, 2018
 
 
 
-# Scenes that haven't been Implemented yet 
+# Scenes Not Implemented Yet
 1) Highscore Scene
 2) Death Scene
 3) Tutorial Scene
