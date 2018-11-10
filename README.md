@@ -36,7 +36,7 @@ Log Last Updated: Fri, Nov 8, 2018
 
 
 ## Deployment
-Platforms: Mobile, WebGl
-Resolution: W: 750 L: 1334 -> Native iPhone 6s resolution ( Device used for testing)
+1) Platforms: Mobile, WebGl
+2) Resolution: W: 750 L: 1334 -> Native iPhone 6s resolution ( Device used for testing)
 
 
