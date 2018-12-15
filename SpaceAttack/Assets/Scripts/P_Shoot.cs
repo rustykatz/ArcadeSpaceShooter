@@ -56,7 +56,9 @@ public class P_Shoot : MonoBehaviour {
          */
         if (Input.GetKeyDown(KeyCode.Space)){
             Rigidbody2D clone;
+          
             clone = Instantiate(Current_Projectile, transform.position, Quaternion.identity) as Rigidbody2D;
+
             clone.velocity = transform.TransformDirection(Vector2.up * force);
 
             if(clone.gameObject.tag == "bullet" && clone.gameObject != null ){
