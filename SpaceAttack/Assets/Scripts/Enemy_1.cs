@@ -21,6 +21,7 @@ public class Enemy_1 : MonoBehaviour {
         if (collision.gameObject.tag == "bullet")
         {
             Debug.Log("Enemy Destroyed.");
+            
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

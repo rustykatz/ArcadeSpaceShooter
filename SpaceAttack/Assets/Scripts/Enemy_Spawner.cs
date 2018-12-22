@@ -9,10 +9,10 @@ public class Enemy_Spawner : MonoBehaviour {
     public float spawnFreq_1 = 1.0f;
     public float spawnFreq_2 = 0.8f;
 
-    public float maxS = -7.0f;
-    public float minS = 7.0f;
+    public float maxS = -6.0f;
+    public float minS = 6.0f;
 
-    public float speed;
+   // public float speed;
   
 
     // Use this for initialization
@@ -31,7 +31,7 @@ public class Enemy_Spawner : MonoBehaviour {
         Vector2 spawnPosition = new Vector2(Random.Range(minS, maxS), transform.position.y);
       
         enemy_clone_1 = Instantiate(enemy_1, spawnPosition, transform.rotation * Quaternion.Euler(180,0,0)) as Rigidbody2D;
-        enemy_clone_1.velocity = transform.TransformDirection(Vector2.up * speed);
+        //enemy_clone_1.velocity = transform.TransformDirection(Vector2.up * speed);
 
     }
     void SpawnEnemy_2()
@@ -39,8 +39,8 @@ public class Enemy_Spawner : MonoBehaviour {
         Rigidbody2D enemy_clone_2;
         Vector2 spawnPosition = new Vector2(Random.Range(minS, maxS), transform.position.y);
 
-        enemy_clone_2 = Instantiate(enemy_2, spawnPosition, transform.rotation * Quaternion.Euler(180, 0, 0)) as Rigidbody2D;
-        enemy_clone_2.velocity = transform.TransformDirection(Vector2.up * speed);
+        enemy_clone_2 = Instantiate(enemy_2, spawnPosition, transform.rotation * Quaternion.Euler(0, 0, 0)) as Rigidbody2D;
+        //enemy_clone_2.velocity = transform.TransformDirection(Vector2.up * speed);
 
     }
 }

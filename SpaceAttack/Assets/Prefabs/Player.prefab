@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4302707523335636}
   - component: {fileID: 212290096470016658}
   - component: {fileID: 114260125792592468}
-  - component: {fileID: 114828399498999780}
   - component: {fileID: 199410143577097898}
   - component: {fileID: 198720676086297264}
   - component: {fileID: 50384024789027882}
@@ -40,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1259007217995976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.07, z: 0}
+  m_LocalPosition: {x: 0, y: -8, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -340,21 +339,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2e7e4860730414b8ae4c24e9698ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
+  Score_Txt: {fileID: 0}
+  Ult_Text: {fileID: 0}
   screenBounds: {x: 0, y: 0}
   objWidth: 0
   objHeight: 0
---- !u!114 &114828399498999780
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1259007217995976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed9aaff26f5104946b3965991effd3ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   Current_Projectile: {fileID: 50369156386058998, guid: 345e2ce1c39874fbab9398438350f257,
     type: 2}
   Projectile_1: {fileID: 50369156386058998, guid: 345e2ce1c39874fbab9398438350f257,
@@ -363,8 +353,7 @@ MonoBehaviour:
     type: 2}
   Projectile_3: {fileID: 50540197052265290, guid: 9fa2ff9ed19834e30adf0fbcbb6a046a,
     type: 2}
-  speed: 10
-  force: 2
+  wp_force: 2
 --- !u!198 &198720676086297264
 ParticleSystem:
   m_ObjectHideFlags: 1

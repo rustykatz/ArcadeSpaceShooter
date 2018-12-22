@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour {
 
@@ -23,6 +24,11 @@ public class Boss : MonoBehaviour {
     float timer;
     int waitingTime = 2;
 
+    // Health
+    int health = 10;
+    //UI 
+    public Text bossHealth; 
+
 
     /*
     *   Awake vs Start? 
@@ -32,6 +38,7 @@ public class Boss : MonoBehaviour {
     */
     public void Awake()
     {
+        bossHealth.text = "Boss Health: " + health.ToString();
         bossRigidBody2D = GetComponent<Rigidbody2D>();
         // Gets current X cord 
         startPos = transform.position.x;
@@ -90,9 +97,20 @@ public class Boss : MonoBehaviour {
     {
         if (collision.gameObject.tag == "bullet")
         {
-            Debug.Log("Boss Destroyed.");
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
+            if(health > 0)
+            {
+                health = health - 1;
+                Destroy(collision.gameObject);
+              
+            }
+            else
+            {
+                Debug.Log("Boss Destroyed.");
+                Destroy(gameObject);
+                Destroy(collision.gameObject);
+            }
+            bossHealth.text = "Boss Health: " + health.ToString();
+           
         }
     }
 
