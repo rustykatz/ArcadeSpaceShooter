@@ -15,12 +15,7 @@ public class Player : MonoBehaviour {
     public Text Score_Txt;
     private float Timer;
 
-    int Ult_Charge;
-    public Text Ult_Text;
     
-   
-
-
     //Screen bounds
     public Vector2 screenBounds;
     public float objWidth;
@@ -28,8 +23,6 @@ public class Player : MonoBehaviour {
 
     
    
-     
-
     //bool speedboost = false; 
 
     // Weapon code
@@ -56,7 +49,7 @@ public class Player : MonoBehaviour {
         curr_weapon = 1;
         lives_remaining = 3;
         Score = 0;
-        Ult_Charge = 0; 
+     
 
 	}
 	
@@ -158,10 +151,12 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("Player has collided into enemy.");
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
             Chk_death();
+            
+            Destroy(collision.gameObject);
+           
             lives_remaining = lives_remaining - 1;
+            
 
             Debug.Log("lives_remaining remaining: " + lives_remaining.ToString());
 
@@ -174,7 +169,7 @@ public class Player : MonoBehaviour {
         if(lives_remaining == 0){
             gameRunning = false; 
             Debug.Log("Score Paused.");
-
+          
             Debug.Log("Transitioning to death_screen");
             SceneManager.LoadScene(death_screen);
 
@@ -194,10 +189,6 @@ public class Player : MonoBehaviour {
         }
        
     }
-    public void Add_Ult()
-    {
-        Ult_Charge += 1;
-        Ult_Text.text = "Ult: " + Ult_Charge.ToString();
-    }
+
 
 }

@@ -9,15 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 72905fe7bc83a420289f57be36ee4f44
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/2cda990e2423bbf4892e6590ba056729
+    path: 
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/HighscoreLevel.unity
     guid: f093a38fbabb74674b9c89a43f065927
   - enabled: 1
-    path: Assets/Scenes/TutorialLevel.unity
+    path: Assets/Scenes/SettingsLevel.unity
     guid: aef08517682414cf2ac2c262d1fc881c
   - enabled: 1
     path: Assets/Scenes/Level_1.unity
     guid: 79a378a1d5f7a42c4997009728b258f4
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 03f21820618344cb4b2900fbb9b1f62f
   m_configObjects: {}
