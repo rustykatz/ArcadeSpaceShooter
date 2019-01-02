@@ -10,7 +10,9 @@ public class Player : MonoBehaviour {
     public float speed = 3.0f;
 
     //Game State
-    int Score; 
+    int Score;
+    int HS;
+    public Text HSS;
     bool gameRunning = false;
     public Text Score_Txt;
     private float Timer;
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour {
         curr_weapon = 1;
         lives_remaining = 3;
         Score = 0;
+        HSS.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
      
 
 	}
@@ -151,11 +154,16 @@ public class Player : MonoBehaviour {
         if (collision.gameObject.tag == "enemy")
         {
             Debug.Log("Player has collided into enemy.");
-            Chk_death();
+           
             
             Destroy(collision.gameObject);
            
             lives_remaining = lives_remaining - 1;
+            if( lives_remaining == 0)
+            {
+                On_death();
+                Destroy(gameObject);
+            }
             
 
             Debug.Log("lives_remaining remaining: " + lives_remaining.ToString());
@@ -165,28 +173,35 @@ public class Player : MonoBehaviour {
     }
 
     // Check if player is dead
-    void Chk_death(){
-        if(lives_remaining == 0){
-            gameRunning = false; 
-            Debug.Log("Score Paused.");
-          
-            Debug.Log("Transitioning to death_screen");
-            SceneManager.LoadScene(death_screen);
+    void On_death(){
+        gameRunning = false; 
+        Debug.Log("Updating highscore if necessary.");
+
+        //Saves the Current game score
+        PlayerPrefs.SetInt("LastScore", Score);
+
+        // Updates highscore if necessary
+        if (Score > PlayerPrefs.GetInt("HighScore", 0)){
+            PlayerPrefs.SetInt("HighScore", Score);
+            HSS.text = Score.ToString();
+            Debug.Log("New HighScore set. ");
 
         }
-        
+        Debug.Log("Transitioning to death_screen");
+        SceneManager.LoadScene(death_screen);
     }
+ 
 
     // Update game score
     void Game_score()
     {
         if (gameRunning == true)
         {
-
             Timer += Time.deltaTime;
-            int Score = (int)(Timer );
+            Score = (int)(Timer );
             Score_Txt.text = "Score: " + Score.ToString();
         }
+
        
     }
 

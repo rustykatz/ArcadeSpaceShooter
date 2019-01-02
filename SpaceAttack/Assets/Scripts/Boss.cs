@@ -56,7 +56,7 @@ public class Boss : MonoBehaviour {
         if (timer > waitingTime)
         {
             //Action
-            Debug.Log("Reset Timer.");
+            //Debug.Log("Reset Timer.");
             timer = 0;
         }
 

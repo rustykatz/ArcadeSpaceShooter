@@ -30,7 +30,7 @@ public class Enemy_Spawner : MonoBehaviour {
         Rigidbody2D enemy_clone_1;
         Vector2 spawnPosition = new Vector2(Random.Range(minS, maxS), transform.position.y);
       
-        enemy_clone_1 = Instantiate(enemy_1, spawnPosition, transform.rotation * Quaternion.Euler(180,0,0)) as Rigidbody2D;
+        enemy_clone_1 = Instantiate(enemy_1, spawnPosition, transform.rotation * Quaternion.Euler(0,0,0)) as Rigidbody2D;
         //enemy_clone_1.velocity = transform.TransformDirection(Vector2.up * speed);
 
     }
