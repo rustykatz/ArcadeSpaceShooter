@@ -38,7 +38,7 @@ public class Boss : MonoBehaviour {
     */
     public void Awake()
     {
-        bossHealth.text = "Boss Health: " + health.ToString();
+        //bossHealth.text = "Boss Health: " + health.ToString();
         bossRigidBody2D = GetComponent<Rigidbody2D>();
         // Gets current X cord 
         startPos = transform.position.x;
@@ -109,7 +109,9 @@ public class Boss : MonoBehaviour {
                 Destroy(gameObject);
                 Destroy(collision.gameObject);
             }
-            bossHealth.text = "Boss Health: " + health.ToString();
+
+            // Displays Boss Health 
+            //bossHealth.text = "Boss Health: " + health.ToString();
            
         }
     }

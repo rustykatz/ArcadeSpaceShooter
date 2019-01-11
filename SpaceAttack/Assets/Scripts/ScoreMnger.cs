@@ -10,10 +10,14 @@ public class ScoreMnger : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
-	}
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+
 }
