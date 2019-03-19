@@ -1,6 +1,14 @@
-# ArcadeSpaceShooter
+# Arcade Space Shooter
 
-Hey there! This project is based on classic space shooter games that inspired me such as Galaga. I plan on completing a playable build as soon as possible then will update it in the future when I have more time. My goal is to include fluid movement, a clean appealing UI and progressive difficulty. The game is built as an iOS app, however I will try to port it onto a website using WebGL. If you have any suggestions on things to add to this game, let me know! 
+Hey there! This project is based on classic space shooter games that inspired me, like Galaga. 
+
+A playable build wil be completed as soon as possible. It will be updated in the future when I have more time. 
+
+Planned features include fluid movement, clean and appealing UI, and progressive difficulty. 
+
+The game is built as an iOS app, and a web port via WebGL will be attempted. 
+
+If you have any suggestions on things to add to this game, let me know! 
 
 
 Log Last Updated: Tue, Feb 5, 2019
@@ -13,12 +21,13 @@ Log Last Updated: Tue, Feb 5, 2019
 4) Progression (needs overhaul)
 
 ## Recently Added
-1) Scene Navigation
-2) Scoring System
-3) Modular Enemy Spawner
+- Scene Navigation
+- Scoring System
+- Modular Enemy Spawner
 
 ## Build Information
-1) Platforms: iOS, WebGl
-2) Resolution: W: 750 L: 1334 -> Native iPhone 6s resolution ( Device used for testing)
+- Platforms: iOS, WebGl
+- Resolution: 1334 x 750
+  - Testing device (iPhone 6s) resolution
 
 
