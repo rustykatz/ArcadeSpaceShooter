@@ -179,7 +179,8 @@ public class Player : MonoBehaviour {
 
         //Saves the Current game score
         PlayerPrefs.SetInt("LastScore", Score);
-
+        
+        //GameObject.FindGameObjectWithTag.        
         // Updates highscore if necessary
         if (Score > PlayerPrefs.GetInt("HighScore", 0)){
             PlayerPrefs.SetInt("HighScore", Score);
