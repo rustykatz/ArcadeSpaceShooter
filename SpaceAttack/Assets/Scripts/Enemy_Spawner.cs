@@ -16,21 +16,23 @@ public class Enemy_Spawner : MonoBehaviour {
     float diff_2 = 0.8f; 
     float diffTimer = 0; 
 
+    int level = 0;
+    float freq = 5f;
    // public float speed;
-  
+    float st = 0f; 
 
     // Use this for initialization
     void Start () {
         // InvokeRepeating: (fxn to invoke, start time, everytime after start) 
-     
-        InvokeRepeating("SpawnEnemy_1", 1.0f, diff_1);
-        InvokeRepeating("SpawnEnemy_2", 3.0f, diff_2);
-        
+        // InvokeRepeating("SpawnEnemy_1", 1.0f, diff_1);
+        // InvokeRepeating("SpawnEnemy_2", 3.0f, diff_2);
 	}
 	
 	// Update is called once per frame
     void Update () {
         Difficulty();
+
+        UpdateDifficulty();
     }
 
     void SpawnEnemy_1(){
@@ -51,18 +53,36 @@ public class Enemy_Spawner : MonoBehaviour {
 
     }
 
+    void UpdateDifficulty(){
+        st += Time.deltaTime;
+        if(st > 2){
+            if(level >= 0 && level < 2){
+                print("Level 1");
+                SpawnEnemy_1();
+                st = 0;
+            }
+            if(level >= 2){
+                print("Level 2");
+                SpawnEnemy_1();
+                SpawnEnemy_1();
+                SpawnEnemy_2();
+                st = 0;
+            }
+
+        }
+        
+    }
+
+
     void Difficulty()
     {
         diffTimer += Time.deltaTime;
        
-        if( diffTimer > 10)
+        if( diffTimer > 5)
         {
             Debug.Log("Increase difficulty");
-            diff_1 -= 0.5f;
-            diff_2 -= 0.5f;
+            level += 1;
             diffTimer = 0;
-            Debug.Log(diff_1);
-            Debug.Log(diff_2);
         }
        
     }

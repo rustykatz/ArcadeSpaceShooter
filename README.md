@@ -18,6 +18,7 @@ Log Last Updated: Tue, Feb 5, 2019
 - Scene navigation
 - Scoring system
 - Modular enemy spawner
+- Updated Unity Version
 
 ## Planned Features
 - Fluid movement
@@ -29,3 +30,8 @@ Log Last Updated: Tue, Feb 5, 2019
 - Platforms: iOS, WebGl
 - Resolution: 1334 x 750
 - Testing device (iPhone 6s) resolution
+
+| DEPENDENCY  |  VERSION |
+| ------------- | ------------- |
+| Unity Version  | 2019.1.2f |
+| TextMeshPro  | 2.0.1 |
