@@ -5,7 +5,7 @@ This project is an iOS game inspired by Galaga. A playable build is currently no
 Suggestions regarding things to add to the game are welcomed!
 
 
-Log Last Updated: Tue, Feb 5, 2019
+Log Last Updated: Tue, March 10, 2020
 
 
 ## Currently Working On
