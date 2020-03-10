@@ -1,8 +1,8 @@
 # Arcade Space Shooter
 
-Hey there! This project is an iOS game inspired by Galaga. A playable build will be completed as soon as possible. The project will be updated in the future if time permits. 
+This project is an iOS game inspired by Galaga. A playable build is currently not available. The project will be updated in the future if time permits. 
 
-If you have any suggestions on things to add to this game, let me know! 
+Suggestions regarding things to add to the game are welcomed!
 
 
 Log Last Updated: Tue, Feb 5, 2019
